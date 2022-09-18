@@ -1,17 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <the-header></the-header>
+  <div class="container">
+    <div class="row">
+      <div class="col-8 col-md-4">
+        <search-box></search-box>
+      </div>
+      <div class="col-12 col-md-8">
+        <current-weather></current-weather>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <the-forecast></the-forecast>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from "./components/layout/TheHeader.vue";
+import CurrentWeather from "./components/layout/CurrentWeather.vue";
+import TheForecast from "./components/layout/TheForecast.vue";
+import SearchBox from "./components/UI/SearchBox.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    TheHeader,
+    CurrentWeather,
+    TheForecast,
+    SearchBox
   }
-}
+};
 </script>
 
 <style>
